@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f4ef;
+  --fg: #1b1a17;
+  --muted: #6b635c;
+  --card: #ffffff;
+  --accent: #0ea5a4;
+  --accent2: #f59e0b;
+  --border: rgba(0, 0, 0, 0.25);
+  --border-strong: rgba(0, 0, 0, 0.4);
+}
+
+.dark {
+  --bg: #0c1116;
+  --fg: #e9e5dd;
+  --muted: #9aa0a6;
+  --card: #121821;
+  --accent: #22d3ee;
+  --accent2: #f97316;
+  --border: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.26);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-display), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--fg) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--fg) 10%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: color-mix(in oklab, var(--card) 84%, transparent);
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(10px);
+}
