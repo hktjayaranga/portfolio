@@ -15,6 +15,7 @@ export default function Home() {
   const phoneHref = `tel:${portfolio.phone.replace(/\\s+/g, '')}`;
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
   const profileSrc = `${basePath}/profile.jpg`;
+  const cvHref = `${basePath}/Thilina-Jayaranga.pdf`;
 
   return (
     <div id="top">
@@ -40,6 +41,13 @@ export default function Home() {
                   className="rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-black shadow-glow transition hover:-translate-y-0.5"
                 >
                   View Projects
+                </a>
+                <a
+                  href={cvHref}
+                  download
+                  className="rounded-full border border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10 px-6 py-3 text-sm font-semibold text-[color:var(--accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--accent)]/20"
+                >
+                  Download CV
                 </a>
                 <a
                   href={`mailto:${portfolio.email}`}
