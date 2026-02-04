@@ -51,14 +51,18 @@ export default function Home() {
             </Reveal>
             <Reveal className="grid gap-4">
               <div className="flex justify-start">
-                <div className="relative h-56 w-56 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-sm md:h-64 md:w-64">
+                <div className="group float-pop relative h-56 w-56 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.55)] md:h-64 md:w-64">
+                  <div className="pulse-glow pointer-events-none absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.35),transparent_60%)] blur-2xl" />
+                  <div className="pointer-events-none absolute -inset-2 rounded-full border-2 border-orange-400/80" />
+                  <div className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-[color:var(--accent)]/40" />
                   <Image
                     src={profileSrc}
                     alt={`${portfolio.name} portrait`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 60vw, 320px"
-                    className="object-cover object-top scale-125"
+                    className="select-none object-cover object-top scale-125 transition duration-500 group-hover:scale-130"
+                    draggable={false}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(12,17,22,0.0),rgba(12,17,22,0.35))]" />
                 </div>

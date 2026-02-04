@@ -63,3 +63,31 @@ body {
   border: 1px solid var(--border-strong);
   backdrop-filter: blur(10px);
 }
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.03);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3.2s ease-in-out infinite;
+}
+
+@keyframes floatPop {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-pop {
+  animation: floatPop 4.5s ease-in-out infinite;
+}
