@@ -13,6 +13,8 @@ import Image from 'next/image';
 export default function Home() {
   const intro = 'Aspiring Software Engineer focused on full-stack development and real-world problem solving.';
   const phoneHref = `tel:${portfolio.phone.replace(/\\s+/g, '')}`;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  const profileSrc = `${basePath}/profile.jpg`;
 
   return (
     <div id="top">
@@ -51,7 +53,7 @@ export default function Home() {
               <div className="flex justify-start">
                 <div className="relative h-56 w-56 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-sm md:h-64 md:w-64">
                   <Image
-                    src="/profile.jpg"
+                    src={profileSrc}
                     alt={`${portfolio.name} portrait`}
                     fill
                     priority
