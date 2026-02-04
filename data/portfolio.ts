@@ -125,14 +125,12 @@ export const portfolio = {
     {
       degree: 'Bachelor of Computer Science',
       institution: 'University of Ruhuna',
-      period: '2022 - Present',
-      meta: 'Current GPA: 3.68'
+      period: '2022 - Present'
     },
     {
       degree: 'G.C.E Advanced Level',
       institution: "St. Thomas' College Matara",
-      period: '2018 - 2020',
-      meta: "2 A's and 1 C"
+      period: '2018 - 2020'
     }
   ] as EducationItem[],
   certifications: [
