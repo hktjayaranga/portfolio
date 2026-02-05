@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     description:
       'Official portfolio of Thilina Jayaranga, Computer Science undergraduate and software developer.'
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png'
+  },
   robots: {
     index: true,
     follow: true
