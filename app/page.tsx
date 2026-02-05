@@ -50,30 +50,30 @@ export default function Home() {
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(12,17,22,0.0),rgba(12,17,22,0.35))]" />
                   </div>
                 </div>
-                <div className="order-4 flex flex-wrap gap-3 sm:gap-4">
-                <a
-                  href="#projects"
-                  className="w-full rounded-full bg-[color:var(--accent)] px-6 py-3 text-center text-sm font-semibold text-black shadow-glow transition hover:-translate-y-0.5 sm:w-auto"
-                >
-                  View Projects
-                </a>
-                <a
-                  href={cvHref}
-                  download
-                  className="w-full rounded-full border border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10 px-6 py-3 text-center text-sm font-semibold text-[color:var(--accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--accent)]/20 sm:w-auto"
-                >
-                  Download CV
-                </a>
-                <a
-                  href={`mailto:${portfolio.email}`}
-                  className="w-full rounded-full border border-slate-400/80 dark:border-white/30 px-6 py-3 text-center text-sm font-semibold text-[color:var(--fg)] transition hover:border-[color:var(--accent)] sm:w-auto"
-                >
-                  Let&apos;s Talk
-                </a>
-                </div>
                 <p className="order-2 max-w-xl text-base text-slate-500 dark:text-slate-400 sm:text-lg md:text-xl lg:order-2">
                   {intro}
                 </p>
+                <div className="order-4 flex flex-wrap gap-3 sm:gap-4">
+                  <a
+                    href="#projects"
+                    className="w-full rounded-full bg-[color:var(--accent)] px-6 py-3 text-center text-sm font-semibold text-black shadow-glow transition hover:-translate-y-0.5 sm:w-auto"
+                  >
+                    View Projects
+                  </a>
+                  <a
+                    href={cvHref}
+                    download
+                    className="w-full rounded-full border border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10 px-6 py-3 text-center text-sm font-semibold text-[color:var(--accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--accent)]/20 sm:w-auto"
+                  >
+                    Download CV
+                  </a>
+                  <a
+                    href={`mailto:${portfolio.email}`}
+                    className="w-full rounded-full border border-slate-400/80 dark:border-white/30 px-6 py-3 text-center text-sm font-semibold text-[color:var(--fg)] transition hover:border-[color:var(--accent)] sm:w-auto"
+                  >
+                    Let&apos;s Talk
+                  </a>
+                </div>
               </div>
             </Reveal>
             <Reveal className="hidden gap-4 lg:grid">
@@ -279,6 +279,27 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <a
+        href="#contact"
+        aria-label="Quick contact"
+        className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-4 py-3 text-xs font-semibold text-black shadow-[0_18px_40px_-18px_rgba(34,211,238,0.7)] transition hover:-translate-y-1 sm:hidden"
+      >
+        <span>Contact</span>
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/10">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+          </svg>
+        </span>
+      </a>
       <Footer />
     </div>
   );
