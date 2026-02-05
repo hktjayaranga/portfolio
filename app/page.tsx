@@ -21,45 +21,64 @@ export default function Home() {
     <div id="top">
       <Background />
       <Navbar />
-      <main className="mx-auto w-full max-w-6xl px-6 pb-20">
-        <section className="pb-16 pt-20 md:pt-28">
+      <main className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+        <section className="pb-12 pt-12 sm:pb-16 sm:pt-16 md:pt-20">
           <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
               <p className="font-mono text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">
                 {portfolio.title}
               </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-                {portfolio.name}
-                <span className="text-gradient">.</span>
-              </h1>
-              <p className="mt-6 text-lg text-[color:var(--muted)] md:text-xl">
-                {intro}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-4 flex flex-col gap-7 sm:gap-8">
+                <h1 className="order-1 text-3xl font-semibold tracking-tight sm:text-4xl md:text-6xl">
+                  {portfolio.name}
+                  <span className="text-gradient">.</span>
+                </h1>
+                <div className="order-2 flex justify-center lg:hidden">
+                  <div className="group float-pop relative h-44 w-44 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.55)] sm:h-52 sm:w-52">
+                    <div className="pulse-glow pointer-events-none absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.35),transparent_60%)] blur-2xl" />
+                    <div className="pointer-events-none absolute -inset-2 rounded-full border-2 border-orange-400/80" />
+                    <div className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-[color:var(--accent)]/40" />
+                    <Image
+                      src={profileSrc}
+                      alt={`${portfolio.name} portrait`}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 60vw, 320px"
+                      className="select-none object-cover object-top scale-125 transition duration-500 group-hover:scale-130"
+                      draggable={false}
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(12,17,22,0.0),rgba(12,17,22,0.35))]" />
+                  </div>
+                </div>
+                <div className="order-3 flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="#projects"
-                  className="rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-black shadow-glow transition hover:-translate-y-0.5"
+                  className="w-full rounded-full bg-[color:var(--accent)] px-6 py-3 text-center text-sm font-semibold text-black shadow-glow transition hover:-translate-y-0.5 sm:w-auto"
                 >
                   View Projects
                 </a>
                 <a
                   href={cvHref}
                   download
-                  className="rounded-full border border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10 px-6 py-3 text-sm font-semibold text-[color:var(--accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--accent)]/20"
+                  className="w-full rounded-full border border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10 px-6 py-3 text-center text-sm font-semibold text-[color:var(--accent)] transition hover:-translate-y-0.5 hover:bg-[color:var(--accent)]/20 sm:w-auto"
                 >
                   Download CV
                 </a>
                 <a
                   href={`mailto:${portfolio.email}`}
-                  className="rounded-full border border-slate-400/80 dark:border-white/30 px-6 py-3 text-sm font-semibold text-[color:var(--fg)] transition hover:border-[color:var(--accent)]"
+                  className="w-full rounded-full border border-slate-400/80 dark:border-white/30 px-6 py-3 text-center text-sm font-semibold text-[color:var(--fg)] transition hover:border-[color:var(--accent)] sm:w-auto"
                 >
                   Let&apos;s Talk
                 </a>
+                </div>
+                <p className="order-4 max-w-xl text-base text-[color:var(--muted)] sm:text-lg md:text-xl lg:order-2">
+                  {intro}
+                </p>
               </div>
             </Reveal>
-            <Reveal className="grid gap-4">
-              <div className="flex justify-start">
-                <div className="group float-pop relative h-56 w-56 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.55)] md:h-64 md:w-64">
+            <Reveal className="hidden gap-4 lg:grid">
+              <div className="flex justify-center sm:justify-start">
+                <div className="group float-pop relative h-44 w-44 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.55)] sm:h-52 sm:w-52 md:h-64 md:w-64">
                   <div className="pulse-glow pointer-events-none absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.35),transparent_60%)] blur-2xl" />
                   <div className="pointer-events-none absolute -inset-2 rounded-full border-2 border-orange-400/80" />
                   <div className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-[color:var(--accent)]/40" />
@@ -77,7 +96,7 @@ export default function Home() {
               </div>
             </Reveal>
           </div>
-          <div className="mt-10 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mt-8 grid gap-4 lg:mt-10 lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
               <div className="glass h-full rounded-2xl p-6">
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">

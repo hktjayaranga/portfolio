@@ -18,7 +18,7 @@ export default function ContactCard({ label, value, href }: ContactCardProps) {
         <p className="text-xs font-mono uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
           {label}
         </p>
-        <p className="mt-2 text-base font-semibold text-slate-900 dark:text-slate-100">
+        <p className="mt-2 break-all text-base font-semibold text-slate-900 dark:text-slate-100 sm:break-words">
           {value}
         </p>
       </div>
