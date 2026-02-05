@@ -33,7 +33,7 @@ export default function Home() {
                   {portfolio.name}
                   <span className="text-gradient">.</span>
                 </h1>
-                <div className="order-2 flex justify-center lg:hidden">
+                <div className="order-3 flex justify-center lg:hidden">
                   <div className="group float-pop relative h-44 w-44 overflow-hidden rounded-full border border-slate-300/80 dark:border-white/15 bg-[color:var(--card)]/90 shadow-[0_24px_60px_-28px_rgba(0,0,0,0.55)] sm:h-52 sm:w-52">
                     <div className="pulse-glow pointer-events-none absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.35),transparent_60%)] blur-2xl" />
                     <div className="pointer-events-none absolute -inset-2 rounded-full border-2 border-orange-400/80" />
@@ -50,7 +50,7 @@ export default function Home() {
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(12,17,22,0.0),rgba(12,17,22,0.35))]" />
                   </div>
                 </div>
-                <div className="order-3 flex flex-wrap gap-3 sm:gap-4">
+                <div className="order-4 flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="#projects"
                   className="w-full rounded-full bg-[color:var(--accent)] px-6 py-3 text-center text-sm font-semibold text-black shadow-glow transition hover:-translate-y-0.5 sm:w-auto"
@@ -71,7 +71,7 @@ export default function Home() {
                   Let&apos;s Talk
                 </a>
                 </div>
-                <p className="order-4 max-w-xl text-base text-[color:var(--muted)] sm:text-lg md:text-xl lg:order-2">
+                <p className="order-2 max-w-xl text-base text-slate-500 dark:text-slate-400 sm:text-lg md:text-xl lg:order-2">
                   {intro}
                 </p>
               </div>
