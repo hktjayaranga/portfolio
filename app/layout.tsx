@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'Official portfolio of Thilina Jayaranga, Computer Science undergraduate and software developer.',
   metadataBase: new URL('https://thilinaj.me'),
   alternates: {
-    canonical: '/'
+    canonical: 'https://thilinaj.me/'
   },
   openGraph: {
     title: 'Thilina Jayaranga | Portfolio',
